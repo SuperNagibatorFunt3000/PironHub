@@ -618,5 +618,161 @@ OrionLib:Init()
 end
 
 if game.PlaceId == 142823291 then
-
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Piron Hub (Murder Mystery 2)", HidePremium = false, IntroText = "Piron Hub", SaveConfig = true, ConfigFolder = "OrionTest"})
+local Tab = Window:MakeTab({
+	Name = "Меню",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+Tab:AddButton({
+	Name = "Само наводка",
+	Callback = function()
+        loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/WRD%20Aimbot.txt"))()
+  	end    
+})
+local Tab = Window:MakeTab({
+	Name = "Телепорты",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "Телепорт на различные места на карте"
+})
+Tab:AddButton({
+	Name = "Телепортироваться на место выбора карты",
+	Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-108.017349, 140.673859, 82.2308884, -0.998025894, -4.83964477e-08, 0.0628038421, -4.64278358e-08, 1, 3.28047456e-08, -0.0628038421, 2.98241396e-08, -0.998025894)
+  	end    
+})
+Tab:AddButton({
+	Name = "Телепортироваться в секретку",
+	Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-150.215134, 153.073853, 114.63549, 0.99982053, 3.5582306e-09, 0.0189458765, -3.25580829e-09, 1, -1.59932778e-08, -0.0189458765, 1.59287232e-08, 0.99982053)
+  	end    
+})
+local Tab = Window:MakeTab({
+	Name = "Визуально",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "Подсветка"
+})
+Tab:AddButton({
+	Name = "Подсветка игроков",
+	Callback = function()
+        local color = BrickColor.new(252, 255, 253)
+        local transparency = .8
+        
+        local Players = game:GetService("Players")
+        local function _ESP(c)
+          repeat wait() until c.PrimaryPart ~= nil
+          for i,p in pairs(c:GetChildren()) do
+            if p.ClassName == "Part" or p.ClassName == "MeshPart" then
+              if p:FindFirstChild("shit") then p.shit:Destroy() end
+              local a = Instance.new("BoxHandleAdornment",p)
+              a.Name = "shit"
+              a.Size = p.Size
+              a.Color = color
+              a.Transparency = transparency
+              a.AlwaysOnTop = true    
+              a.Visible = true    
+              a.Adornee = p
+              a.ZIndex = true    
+        
+            end
+          end
+        end
+        local function ESP()
+          for i,v in pairs(Players:GetChildren()) do
+            if v ~= game.Players.LocalPlayer then
+              if v.Character then
+                _ESP(v.Character)
+              end
+              v.CharacterAdded:Connect(function(chr)
+                _ESP(chr)
+              end)
+            end
+          end
+          Players.PlayerAdded:Connect(function(player)
+            player.CharacterAdded:Connect(function(chr)
+              _ESP(chr)
+            end)  
+          end)
+        end
+        ESP()
+  	end    
+})
+local Tab = Window:MakeTab({
+	Name = "Характер",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "Основные изменения"
+})
+Tab:AddSlider({
+	Name = "Скорость",
+	Min = 0,
+	Max = 500,
+	Default = 16,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "bananas",
+	Callback = function(Value)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+	end    
+})
+Tab:AddSlider({
+	Name = "Прыжок",
+	Min = 0,
+	Max = 500,
+	Default = 50,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	Callback = function(Value)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+	end    
+})
+local Section = Tab:AddSection({
+	Name = "Дополнительные изменения"
+})
+Tab:AddButton({
+	Name = "Анти-Афк",
+	Callback = function()
+        loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/anti-afk%20via%20autofocus.txt"))()
+  	end    
+})
+Tab:AddButton({
+	Name = "левый ctrl + клик = телепорт",
+	Callback = function()
+        loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Click%20Teleport.txt"))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Удалить ноги",
+	Callback = function()
+        loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Remove%20Legs.txt"))()
+  	end    
+})
+Tab:AddButton({
+	Name = "BTools",
+	Callback = function()
+        loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/BTools.txt"))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Удалить руки",
+	Callback = function()
+        loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Remove%20Arms.txt"))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Бесконечные прыжки",
+	Callback = function()
+        loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Infinite%20Jump.txt"))()
+  	end    
+})
+OrionLib:Init()
 end
