@@ -179,3 +179,70 @@ Tab:AddButton({
   	end    
 })
 end
+
+if game.PlaceId == 662417684 then
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Piron Hub (LUCKY BLOCKS Battlegrounds)", HidePremium = true, SaveConfig = false, ConfigFolder = "OrionTest"})
+local Tab = Window:MakeTab({
+	Name = "Лаки блоки",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "Открыть Лаки Блок"
+})
+OrionLib:MakeNotification({
+	Name = "Привет Владос!",
+	Content = "Приятной игры тебе с моим новым GUI",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+Tab:AddButton({
+	Name = "Открыть обычный лаки блок",
+	Callback = function()
+        local Event = game:GetService("ReplicatedStorage").SpawnLuckyBlock
+        Event:FireServer()
+  	end    
+})
+Tab:AddButton({
+	Name = "Открыть супер лаки блок",
+	Callback = function()
+        local Event = game:GetService("ReplicatedStorage").SpawnSuperBlock
+        Event:FireServer()
+  	end    
+})
+Tab:AddButton({
+	Name = "Открыть радужный лаки блок",
+	Callback = function()
+        local Event = game:GetService("ReplicatedStorage").SpawnRainbowBlock
+        Event:FireServer()
+  	end    
+})
+Tab:AddButton({
+	Name = "Открыть алмазный лаки блок",
+	Callback = function()
+        local Event = game:GetService("ReplicatedStorage").SpawnDiamondBlock
+        Event:FireServer()
+  	end    
+})
+Tab:AddButton({
+	Name = "Открыть галактический лаки блок",
+	Callback = function()
+        local Event = game:GetService("ReplicatedStorage").SpawnGalaxyBlock
+        Event:FireServer()
+  	end    
+})
+local Tab = Window:MakeTab({
+	Name = "Ресет",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "Ресет"
+})
+Tab:AddButton({
+	Name = "Ресет всех вещей (убивает)",
+	Callback = function()
+        game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  	end    
+})
+OrionLib:Init()
+end
