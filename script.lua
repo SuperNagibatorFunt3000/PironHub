@@ -447,7 +447,7 @@ end
 
 if game.PlaceId == 2809202155 then
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Piron Hub (Your Bizarre Adventure)", IntroEnabled = false, IntroText = "Piron Hub", HidePremium = true, SaveConfig = false, ConfigFolder = "YBA Test GUI"})
+local Window = OrionLib:MakeWindow({Name = "Piron Hub (Your Bizarre Adventure)", IntroText = "Piron Hub", HidePremium = true, SaveConfig = false, ConfigFolder = "YBA Test GUI"})
 local Tab = Window:MakeTab({
 	Name = "Combat",
 	PremiumOnly = false
@@ -615,4 +615,8 @@ Tab:AddButton({
   	end    
 })
 OrionLib:Init()
+end
+
+if game.PlaceId == 142823291 then
+
 end
