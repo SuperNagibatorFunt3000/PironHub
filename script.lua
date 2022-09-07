@@ -182,7 +182,7 @@ end
 
 if game.PlaceId == 662417684 then
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Piron Hub (LUCKY BLOCKS Battlegrounds)", HidePremium = true, IntroText = "Piron Hub", SaveConfig = false, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Piron Hub (LUCKY BLOCKS Battlegrounds)", HidePremium = true, SaveConfig = false, ConfigFolder = "OrionTest"})
 local Tab = Window:MakeTab({
 	Name = "Лаки блоки",
 	PremiumOnly = false
@@ -245,4 +245,121 @@ Tab:AddButton({
   	end    
 })
 OrionLib:Init()
+end
+if game.PlaceId == 9534337535 then
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Piron Hub (Shrek in the Backrooms (New Entity!))", HidePremium = true, IntroText = "Piron Hub", SaveConfig = false, ConfigFolder = "OrionTest"})
+local Tab = Window:MakeTab({
+	Name = "Телепорты",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "Телепорты"
+})
+OrionLib:MakeNotification({
+	Name = "Привет,бро!",
+	Content = "Спасибо за то что используешь на GUI!",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+Tab:AddButton({
+	Name = "Телепортироваться на старт",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-141.952148, 3.97397065, -285.789551, 0.636567771, 1.07001711e-07, 0.771220744, -6.06484036e-08, 1, -8.86839331e-08, -0.771220744, 9.68002656e-09, 0.636567771)
+  	end    
+})
+Tab:AddButton({
+	Name = "Телепортироваться на начало лабиринта",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-139.292404, 3.97396636, -183.120972, -0.994047821, -1.54171147e-08, -0.108944476, -1.11191412e-08, 1, -4.00585343e-08, 0.108944476, -3.86087287e-08, -0.994047821)
+  	end    
+})
+Tab:AddButton({
+	Name = "Телепортироваться к шкафчикам в лабиринте",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-81.8841782, 3.97397089, 74.7239685, -0.999962389, -8.07557221e-09, -0.00867179129, -7.95354005e-09, 1, -1.4106786e-08, 0.00867179129, -1.40372842e-08, -0.999962389)
+  	end    
+})
+Tab:AddButton({
+	Name = "Телепортироваться к бумажке с кодом",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-86.258667, 3.97397065, -152.541016, 0.999046862, -1.22757546e-08, -0.0436507128, 1.61495226e-08, 1, 8.83920492e-08, 0.0436507128, -8.90127367e-08, 0.999046862)
+  	end    
+})
+Tab:AddButton({
+	Name = "Телепортироваться к шкафчикам в лабиринте #2",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-235.345291, 3.97397232, -180.226486, -0.0314217843, -4.44316051e-08, 0.999506235, -4.93665837e-08, 1, 4.2901604e-08, -0.999506235, -4.79941633e-08, -0.0314217843)
+  	end    
+})
+Tab:AddButton({
+	Name = "Телепортироваться к ловушке",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-179.980133, 3.99999976, -144.564301, -0.807280421, 4.0790038e-09, 0.590168059, -2.81122947e-08, 1, -4.53659048e-08, -0.590168059, -5.32139843e-08, -0.807280421)
+  	end    
+})
+Tab:AddButton({
+	Name = "Телепортироваться к двери у ловушки",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-164.059631, 3.99999881, -94.130722, -0.00866651814, 7.44290318e-09, 0.999962449, -1.14026677e-09, 1, -7.45306483e-09, -0.999962449, -1.20481602e-09, -0.00866651814)
+  	end    
+})
+Tab:AddButton({
+	Name = "Телепортироваться к двери #2",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-309.285126, 3.99999905, -139.059738, 0.997554064, -2.60379984e-09, -0.0698990077, 7.13759052e-10, 1, -2.70645693e-08, 0.0698990077, 2.6948479e-08, 0.997554064)
+  	end    
+})
+Tab:AddButton({
+	Name = "Телепортироваться в комнату с тремя дверями",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-306.060608, 3.99999952, -4.39326334, -0.0155086359, -1.53272115e-08, 0.999879718, -2.75261236e-09, 1, 1.52863606e-08, -0.999879718, -2.51521071e-09, -0.0155086359)
+  	end    
+})
+Tab:AddButton({
+	Name = "Телепортироваться к шкафчику #3",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-389.839294, 3.99999952, 67.4435883, 0.955370486, 5.01525754e-09, 0.295410216, -3.50034703e-08, 1, 9.62255911e-08, -0.295410216, -1.02271478e-07, 0.955370486)
+  	end    
+})
+Tab:AddButton({
+	Name = "Телепортироваться к шкафчику #4",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-362.349243, 3.99999881, 197.949478, -0.805595398, 4.48886937e-08, 0.592466056, 2.66088449e-08, 1, -3.95849362e-08, -0.592466056, -1.61246057e-08, -0.805595398)
+  	end    
+})
+Tab:AddButton({
+	Name = "Телепортироваться к шкафчику #5",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-294.542877, 3.99999928, 371.900787, 0.991443038, -6.78275214e-09, -0.130539998, 1.17166463e-08, 1, 3.7028002e-08, 0.130539998, -3.82406462e-08, 0.991443038)
+  	end    
+})
+Tab:AddButton({
+	Name = "Бейдж",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-325.134766, 3.99999857, 184.886612, -0.0687762126, 1.40514436e-08, 0.997632086, -2.71089484e-09, 1, -1.42716816e-08, -0.997632086, -3.68602815e-09, -0.0687762126
+        )
+  	end    
+})
+local Tab = Window:MakeTab({
+	Name = "Характер",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "Хп"
+})
+Tab:AddButton({
+	Name = "Востановить хп на фулл",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.Humanoid.Health = 100
+  	end    
+})
+Tab:AddButton({
+	Name = "Ресет",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  	end    
+})
 end
