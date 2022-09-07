@@ -182,7 +182,7 @@ end
 
 if game.PlaceId == 662417684 then
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Piron Hub (LUCKY BLOCKS Battlegrounds)", HidePremium = true, SaveConfig = false, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Piron Hub (LUCKY BLOCKS Battlegrounds)", HidePremium = true, IntroText = "Piron Hub", SaveConfig = false, ConfigFolder = "OrionTest"})
 local Tab = Window:MakeTab({
 	Name = "Лаки блоки",
 	PremiumOnly = false
