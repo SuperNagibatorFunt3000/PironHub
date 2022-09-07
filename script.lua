@@ -363,3 +363,84 @@ Tab:AddButton({
   	end    
 })
 end
+
+if game.PlaceId == 7991339063 then
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Piron Hub (Rainbow Friends)", HidePremium = true, IntroText = "Piron Hub", SaveConfig = false, ConfigFolder = "OrionTest"})
+local Tab = Window:MakeTab({
+	Name = "Combat",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "Visuals"
+})
+Tab:AddButton({
+	Name = "Monsters and Items ESP",
+	Callback = function()
+        local itemsOfInterest = Instance.new("Model", workspace)
+        itemsOfInterest.Name = "Items of Interest"
+        
+        for i, v in pairs (workspace:GetChildren()) do
+        if v.Name == "Battery" or (v.Name:find("^Block") and v:IsA("Model")) or (v.Name:find("^Food") and v:IsA("Model")) or (v.Name:find("^Fuse") and v:IsA("Model")) then
+        v.Parent = itemsOfInterest
+        end
+        end
+        
+        for i, v in pairs (workspace.Monsters:GetChildren()) do
+        local highlight = Instance.new("Highlight")
+        highlight.Parent = v
+        highlight.Adornee = v
+        highlight.FillColor = Color3.new(255, 0, 0)
+        highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+        highlight.FillTransparency = 0.5
+        end
+        
+        local highlight = Instance.new("Highlight")
+        highlight.Parent = itemsOfInterest
+        highlight.Adornee = itemsOfInterest
+        highlight.FillColor = Color3.new(0, 255, 0)
+        highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+        highlight.FillTransparency = 0.5
+  	end    
+})
+local Section = Tab:AddSection({
+	Name = "AutoWin"
+})
+Tab:AddButton({
+	Name = "Drop Items",
+	Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(371.54364013671875, 45.604129791259766, 132.65687561035156)
+  	end    
+})
+Tab:AddButton({
+	Name = "Get Items",
+	Callback = function()
+        for i,v in pairs(game.workspace.Map_C1.ItemSpawns:GetDescendants()) do
+            if v.name == "ItemSpawn" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.Position)
+            wait(0.1)
+            end
+            end
+  	end    
+})
+local Tab = Window:MakeTab({
+	Name = "Character",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "Base Character"
+})
+Tab:AddSlider({
+	Name = "Speed",
+	Min = 0,
+	Max = 500,
+	Default = 16,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	Callback = function(Value)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+	end    
+})
+end
