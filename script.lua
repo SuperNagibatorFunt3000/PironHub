@@ -7,10 +7,6 @@ local TP = Window:MakeTab({
 	Name = "Teleports",
 	PremiumOnly = false
 })
-local Character = Window:MakeTab({
-	Name = "Characters",
-	PremiumOnly = false
-})
 local OtherScripts = Window:MakeTab({
 	Name = "Other Scripts",
 	PremiumOnly = false
@@ -31,26 +27,3 @@ OtherScripts:AddButton({
   	end    
 })
 end
---Sliders
-Character:AddSlider({
-	Name = "Speed",
-	Min = 0,
-	Max = 500,
-	Default = 16
-	Color = Color3.fromRGB(255,255,255),
-	Increment = 1,
-	Callback = function(Value)
-		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
-	end    
-})
-Character:AddSlider({
-	Name = "Jump",
-	Min = 0,
-	Max = 500,
-	Default = 50
-	Color = Color3.fromRGB(255,255,255),
-	Increment = 1,
-	Callback = function(Value)
-		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
-	end    
-})
