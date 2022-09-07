@@ -37,7 +37,7 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 Tab:AddButton({
-	Name = "Police",
+	Name = "Police (PATCHED)",
 	Callback = function()
       		local args = {
     [1] = "Bright blue"
@@ -53,7 +53,7 @@ workspace.Remote.loadchar:InvokeServer(unpack(args))
   	end    
 })
 Tab:AddButton({
-	Name = "Prisoner",
+	Name = "Prisoner (PATCHED)",
 	Callback = function()
       		local args = {
     [1] = "Bright orange"
@@ -77,7 +77,7 @@ local a,b,c=nil,nil,nil([[Boronide Obfuscation, discord.gg/boronide]]):gsub('(.*
   	end    
 })
 Tab:AddButton({
-	Name = "Criminal",
+	Name = "Criminal (PATCHED)",
 	Callback = function()
       		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-921, 95, 2145)
 local args = {
@@ -153,6 +153,29 @@ Tab:AddButton({
 }
 
 workspace.Remote.ItemHandler:InvokeServer(unpack(args))
+  	end    
+})
+local Tab = Window:MakeTab({
+	Name = "Other Scripts",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+Tab:AddButton({
+	Name = "Infinity Yield",
+	Callback = function()
+      		loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+  	end    
+})
+Tab:AddButton({
+	Name = "CMD-X",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source",true))()
+  	end    
+})
+Tab:AddButton({
+	Name = "CMD (only prison life)",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/1RvgFtcx"))()
   	end    
 })
 end
