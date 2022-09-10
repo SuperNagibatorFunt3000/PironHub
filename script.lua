@@ -992,4 +992,23 @@ TP:AddButton({
       		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6026, 161, -20)
   	end    
 })
+TP:AddButton({
+	Name = "Teleport to 3 camp",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(9125, 435, 105)
+  	end    
+})
 end
+
+--Sliders
+Character:AddSlider({
+	Name = "Speed",
+	Min = 0,
+	Max = 500,
+	Default = 16,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	Callback = function(Value)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+	end    
+})
