@@ -941,7 +941,7 @@ Tab:AddButton({
 OrionLib:Init()
 end
 
-if gane.PlaceId == 2693023319 then
+if game.PlaceId == 2693023319 then
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Piron Hub (Expedition Antarctica) [BETA]", HidePremium = true, SaveConfig = false, IntroText = "Piron Hub", ConfigFolder = "OrionTest"})
 --Tabs
