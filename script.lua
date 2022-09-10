@@ -955,7 +955,11 @@ local TP = Window:MakeTab({
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-
+local Character = Window:MakeTab({
+	Name = "Characters",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
 --Buttons
 Farm:AddButton({
 	Name = "Infinity Money",
@@ -974,6 +978,18 @@ Farm:AddButton({
 	Callback = function()
       		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1807, 105, -137)
       		wait(0.3)
+  	end    
+})
+Character:AddButton({
+	Name = "Full HP (Visual)",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.Humanoid.Health = 100
+  	end    
+})
+TP:AddButton({
+	Name = "Teleport to 2 camp",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6026, 161, -20)
   	end    
 })
 end
