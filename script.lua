@@ -960,6 +960,11 @@ local Character = Window:MakeTab({
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
+local Secret = Window:MakeTab({
+	Name = "camp (Badge)",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
 --Buttons
 Farm:AddButton({
 	Name = "Infinity Money",
@@ -998,8 +1003,30 @@ TP:AddButton({
       		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(9125, 435, 105)
   	end    
 })
-end
-
+Secret:AddButton({
+	Name = "Teleport to start secret (parkour)",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(9442, 425, 42)
+  	end    
+})
+Secret:AddButton({
+	Name = "Teleport to finish secret (parkour)",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(10435, 396, 62)
+  	end    
+})
+Secret:AddButton({
+	Name = "Teleport to grab 1000 coin",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(11126, 389, 111)
+  	end    
+})
+Secret:AddButton({
+	Name = "Teleport to sit on the plain",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(11121, 389, 1)
+  	end    
+})
 --Sliders
 Character:AddSlider({
 	Name = "Speed",
@@ -1012,3 +1039,15 @@ Character:AddSlider({
 		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
 	end    
 })
+Character:AddSlider({
+	Name = "Jump",
+	Min = 0,
+	Max = 500,
+	Default = 50,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	Callback = function(Value)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+	end    
+})
+end
